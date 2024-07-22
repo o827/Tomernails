@@ -72,7 +72,7 @@
             letter-spacing: 2px;
             color: #333;
         }
-        .stats, .features, .reviews {
+        .stats, .features {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
@@ -157,6 +157,20 @@
             display: block;
             margin: 0 auto;
         }
+        .reviews {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .review {
+            flex: 1 1 calc(25% - 20px);
+            margin: 10px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
         @media (max-width: 768px) {
             .stat-item, .feature-item, .review {
                 width: 100%;
@@ -225,7 +239,7 @@
 
         <section id="about" class="about-me">
             <h2>הסיפור שלי</h2>
-            <p>התחלתי ב2016 עוד שלא היו מכונות שיוף! הייתי בת 15 אז, עשיתי קורס על לק גל בנייה וקישוטים עם עוד 7 בנות בכיתה, כשסיימתי את הקורס הרגשתי שלא למדתי כלום ושום דבר! התחלתי לעשות על עצמי ועל חברות, עם הזמן התחלתי לקבל פניות מאנשים שרוצים לעשות אצלי לק וככה זה התגלגל! תוך 4 חודשים היה לי יומן עם 80 לקוחות ורובן חוזרות!</p>
+            <p>התחלתי ב-2016, כשהייתי בת 15, עוד שלא היו מכונות שיוף. עשיתי קורס על לק ג'ל בנייה וקישוטים עם עוד 7 בנות בכיתה, וכשסיימתי את הקורס הרגשתי שלא למדתי כלום ושום דבר. התחלתי לעשות על עצמי ועל חברות, ועם הזמן התחלתי לקבל פניות מאנשים שרוצים לעשות אצלי לק וככה זה התגלגל! תוך 4 חודשים היה לי יומן עם 80 לקוחות ורובן חוזרות!</p>
         </section>
 
         <section id="reviews" class="reviews">
