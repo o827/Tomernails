@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>התקדמי עם ניילס</title>
+    <title>תומר גדי</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,7 +11,7 @@
             color: #333;
             margin: 0;
             padding: 0;
-            background: #f5e1da;
+            background: linear-gradient(135deg, #f5e1da 0%, #f1d1c1 100%);
             direction: rtl;
         }
         .container {
@@ -22,7 +22,7 @@
             padding: 20px;
         }
         header {
-            background: #f1d1c1;
+            background: transparent;
             color: #333;
             padding: 20px 0;
             text-align: center;
@@ -80,7 +80,7 @@
             text-align: center;
         }
         .stat-item, .feature-item {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -97,15 +97,21 @@
             color: #FF8C00;
         }
         .stat-description {
-            font-size: 1em;
+            font-size: 0.9em;
             margin-top: 10px;
+        }
+        .feature-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
         }
         .highlight {
             color: #FF8C00;
             font-weight: bold;
         }
         .cta-form, .about-me, .reviews, .explanations {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             margin: 20px auto;
             border-radius: 10px;
@@ -156,6 +162,15 @@
             display: block;
             margin: 0 auto;
         }
+        @media (max-width: 768px) {
+            .stat-item, .feature-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .cta-button, button {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -173,7 +188,7 @@
             </ul>
         </nav>
         <div class="logo-container">
-            <img src="/mnt/data/image.png" alt="Tomer Gedi Logo" class="logo-image">
+            <img src="file-M5Wwmrgx36cSY635sHTusz5Y" alt="Tomer Gedi Logo" class="logo-image">
             <div class="tagline">Tomer's Place</div>
         </div>
         <h1>קחי את הקריירה שלך לרמה הבאה עם ניילס</h1>
