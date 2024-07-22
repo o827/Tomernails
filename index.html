@@ -66,10 +66,6 @@
             letter-spacing: -5px;
             color: #FF8C00;
         }
-        .logo span:first-child {
-            position: relative;
-            left: 20px;
-        }
         .tagline {
             font-size: 24px;
             margin-top: 10px;
@@ -103,12 +99,6 @@
         .stat-description {
             font-size: 1em;
             margin-top: 10px;
-        }
-        .feature-item img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
         }
         .highlight {
             color: #FF8C00;
@@ -160,14 +150,20 @@
             margin-bottom: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+        .logo-image {
+            width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
             <div class="social-icons">
-                <img src="instagram-icon.png" alt="Instagram">
                 <img src="whatsapp-icon.png" alt="WhatsApp">
+                <img src="instagram-icon.png" alt="Instagram">
             </div>
             <ul>
                 <li><a href="#results">תוצאות</a></li>
@@ -177,9 +173,7 @@
             </ul>
         </nav>
         <div class="logo-container">
-            <div class="logo">
-                <span>T</span><span>G</span>
-            </div>
+            <img src="/mnt/data/image.png" alt="Tomer Gedi Logo" class="logo-image">
             <div class="tagline">Tomer's Place</div>
         </div>
         <h1>קחי את הקריירה שלך לרמה הבאה עם ניילס</h1>
@@ -203,17 +197,14 @@
 
         <section class="features">
             <div class="feature-item">
-                <img src="personal-attention.jpg" alt="יחס אישי">
                 <h3>יחס אישי</h3>
                 <p>כל קורס מועבר ל-2 תלמידות בלבד! כדי לתת יחס אישי מדהים לכל תלמידה</p>
             </div>
             <div class="feature-item">
-                <img src="expert-knowledge.jpg" alt="ידע שיווק קריטי">
                 <h3>ידע שיווק קריטי</h3>
                 <p>הספרים אינו רעה אך מספיק רק להוציא עבודות מושלמות, לאורך כל הקורס, נבנה יחד חשיבה שיווקית והספרנית בראשית החברתית</p>
             </div>
             <div class="feature-item">
-                <img src="certification.jpg" alt="תעודת הסמכה מקצועית">
                 <h3>תעודת הסמכה מקצועית</h3>
                 <p>כמובן שלאחר הקורס את מקבלי ממני תעודת הסמכה, תעודת ההסמכה תעזור לך בעתיד להתקדם דרכך בתחום</p>
             </div>
