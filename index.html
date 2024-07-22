@@ -20,6 +20,13 @@
             overflow: hidden;
             padding: 20px;
         }
+        .top-banner {
+            background-color: #FF8C00;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+        }
         header {
             background: transparent;
             color: #333;
@@ -192,9 +199,45 @@
                 width: 250px;
             }
         }
+        .important-section {
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f0e6e0;
+            border-radius: 10px;
+        }
+        .boxes-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .box {
+            background-color: #fff1e6;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .box h3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .box h3 img {
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
+    <div class="top-banner">
+        הדרך להפוך את התשוקה שלך למקצוע מתחילה כאן!
+    </div>
+
     <header>
         <nav>
             <div class="social-icons">
@@ -255,7 +298,42 @@
             </div>
         </section>
 
-        <section class="reviews">
+        <section class="important-section">
+            <h2>חשוב לי שתביני</h2>
+            <p>בשעה טלפון אני יודעת, את לא תירכש ממך 3 דברים עיקריים שכדאי שתורי לך-</p>
+            
+            <div class="boxes-container">
+                <div class="box">
+                    <h3>
+                        <img src="/api/placeholder/24/24" alt="Nail Polish Emoji">
+                        התמדה
+                    </h3>
+                    <p>את היכולת להיות עקבמית לכל דבר ועניין! ואת צריכה להבין שאת באה ברגע שהחלטת להתחיל! לעבוד שהטכניקות שהעבדתי אותן, דברים יתחילו לזרום יותר בקלות</p>
+                </div>
+                <div class="box">
+                    <h3>
+                        <img src="/api/placeholder/24/24" alt="Checklist Emoji">
+                        משימתיות
+                    </h3>
+                    <p>כדי להצליח בתחום את תמיד תצטרכי ללמוד על המקצוע! איך בונים ציפה בצורה נכונה, מה ההשראות שצריך, שיווק, מקצועי, איך לחשב לקוחות, לתמוד את האנרגיות שלעצמך וזה מה שעמדת לאורך הקורס</p>
+                </div>
+                <div class="box">
+                    <h3>
+                        <img src="/api/placeholder/24/24" alt="Gear Emoji">
+                        שירותיות
+                    </h3>
+                    <p>כדי לשמור את הלבנות שבעזרות אליך ולא יברחו להתחרות, את חייבת לשמור על רמת שירותיות מקבלת בעובה גבס כך שכל אחת</p>
+                </div>
+            </div>
+
+            <p>זה לא הולך להיות קלי אבל בדרך שתעשיי את שלושת אלה</p>
+            <h3>הקרת הסנפד שלך לא תהיה מוגבלת</h3>
+            <h3>הזמן שלך יהיה נתון לשליטתך</h3>
+            <h3>והכי חשוב - את תקומי בבוקר ותעשי את מה שאת אוהבת לעשות!</h3>
+            <p>לחלק מהבנות שכבר יצאו ממני עם תעודה היה חשוב להגיד לי מה הן חושבות על התהליך שעברו</p>
+        </section>
+
+  <section class="reviews">
             <h2 style="text-align: center; margin-top: 40px;">מה הלקוחות שלנו אומרים</h2>
             <div class="review-container">
                 <div class="review-item">
