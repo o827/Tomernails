@@ -51,24 +51,6 @@
             text-decoration: none;
             color: #333;
         }
-        .social-icons img {
-            width: 24px;
-            height: 24px;
-            margin-left: 10px;
-        }
-        .logo-container {
-            text-align: center;
-            margin: 20px auto;
-        }
-        .logo {
-            font-size: 72px;
-            font-weight: bold;
-            letter-spacing: -5px;
-        }
-        .logo span:first-child {
-            position: relative;
-            left: 20px;
-        }
         .tagline {
             font-size: 24px;
             margin-top: 10px;
@@ -120,12 +102,6 @@
         .feature-item:hover {
             transform: translateY(-5px);
         }
-        .feature-item img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
         .cta-form, .about-me {
             background: rgba(255, 255, 255, 0.8);
             padding: 20px;
@@ -174,15 +150,18 @@
             scroll-snap-type: x mandatory;
             gap: 20px;
             padding: 20px 0;
+            white-space: nowrap;
         }
         .review-item {
             flex: 0 0 auto;
-            width: 300px;
+            width: 250px;
             background-color: #FFE5B4;
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             scroll-snap-align: start;
+            display: inline-block;
+            vertical-align: top;
         }
         .review-item h3 {
             font-size: 1.2em;
@@ -226,11 +205,6 @@
             justify-content: center;
             margin-bottom: 10px;
         }
-        .box h3 img {
-            width: 24px;
-            height: 24px;
-            margin-left: 10px;
-        }
     </style>
 </head>
 <body>
@@ -240,10 +214,6 @@
 
     <header>
         <nav>
-            <div class="social-icons">
-                <img src="/api/placeholder/24/24" alt="Instagram">
-                <img src="/api/placeholder/24/24" alt="WhatsApp">
-            </div>
             <ul>
                 <li><a href="#results">תוצאות</a></li>
                 <li><a href="#about">מי אני</a></li>
@@ -251,12 +221,7 @@
                 <li><a href="#contact">צרי קשר</a></li>
             </ul>
         </nav>
-        <div class="logo-container">
-            <div class="logo">
-                <span>T</span><span>G</span>
-            </div>
-            <div class="tagline">Tomer's Place</div>
-        </div>
+        <div class="tagline">Tomer's Place</div>
         <h1>קחי את הקריירה שלך לרמה הבאה עם ניילס</h1>
     </header>
 
@@ -278,21 +243,18 @@
 
         <section class="features">
             <div class="feature-item">
-                <img src="/api/placeholder/150/150" alt="יחס אישי">
                 <h3>יחס אישי</h3>
                 <p>כל קורס מועבר ל-2 תלמידות בלבד! כדי לתת יחס אישי מדהים לכל תלמידה</p>
             </div>
         </section>
         <section class="features">
             <div class="feature-item">
-                <img src="/api/placeholder/150/150" alt="ידע שיווק קריטי">
                 <h3>ידע שיווק קריטי</h3>
                 <p>הספרים אינו רעה אך מספיק רק להוציא עבודות מושלמות, לאורך כל הקורס, נבנה יחד חשיבה שיווקית והספרנית בראשית החברתית</p>
             </div>
         </section>
         <section class="features">
             <div class="feature-item">
-                <img src="/api/placeholder/150/150" alt="תעודת הסמכה מקצועית">
                 <h3>תעודת הסמכה מקצועית</h3>
                 <p>כמובן שלאחר הקורס את מקבלי ממני תעודת הסמכה, תעודת ההסמכה תעזור לך בעתיד להתקדם דרכך בתחום</p>
             </div>
@@ -304,24 +266,15 @@
             
             <div class="boxes-container">
                 <div class="box">
-                    <h3>
-                        <img src="/api/placeholder/24/24" alt="Nail Polish Emoji">
-                        התמדה
-                    </h3>
+                    <h3>התמדה</h3>
                     <p>את היכולת להיות עקבמית לכל דבר ועניין! ואת צריכה להבין שאת באה ברגע שהחלטת להתחיל! לעבוד שהטכניקות שהעבדתי אותן, דברים יתחילו לזרום יותר בקלות</p>
                 </div>
                 <div class="box">
-                    <h3>
-                        <img src="/api/placeholder/24/24" alt="Checklist Emoji">
-                        משימתיות
-                    </h3>
+                    <h3>משימתיות</h3>
                     <p>כדי להצליח בתחום את תמיד תצטרכי ללמוד על המקצוע! איך בונים ציפה בצורה נכונה, מה ההשראות שצריך, שיווק, מקצועי, איך לחשב לקוחות, לתמוד את האנרגיות שלעצמך וזה מה שעמדת לאורך הקורס</p>
                 </div>
                 <div class="box">
-                    <h3>
-                        <img src="/api/placeholder/24/24" alt="Gear Emoji">
-                        שירותיות
-                    </h3>
+                    <h3>שירותיות</h3>
                     <p>כדי לשמור את הלבנות שבעזרות אליך ולא יברחו להתחרות, את חייבת לשמור על רמת שירותיות מקבלת בעובה גבס כך שכל אחת</p>
                 </div>
             </div>
@@ -333,7 +286,7 @@
             <p>לחלק מהבנות שכבר יצאו ממני עם תעודה היה חשוב להגיד לי מה הן חושבות על התהליך שעברו</p>
         </section>
 
-  <section class="reviews">
+        <section class="reviews">
             <h2 style="text-align: center; margin-top: 40px;">מה הלקוחות שלנו אומרים</h2>
             <div class="review-container">
                 <div class="review-item">
