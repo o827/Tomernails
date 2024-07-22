@@ -1,48 +1,260 @@
-() => (
-  <div style={{ fontFamily: 'Arial, sans-serif', direction: 'rtl', background: 'linear-gradient(135deg, #f5e1da 0%, #f1d1c1 100%)', padding: '20px', minHeight: '100vh' }}>
-    <header style={{ textAlign: 'center', marginBottom: '20px' }}>
-      <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-        <div>
-          <span>Social Icons</span>
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>התקדמי עם ניילס</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5e1da 0%, #f1d1c1 100%);
+            direction: rtl;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: transparent;
+            color: #333;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+        }
+        .logo-container {
+            text-align: center;
+            margin: 20px auto;
+        }
+        .logo {
+            font-size: 72px;
+            font-weight: bold;
+            letter-spacing: -5px;
+        }
+        .logo span:first-child {
+            position: relative;
+            left: 20px;
+        }
+        .tagline {
+            font-size: 24px;
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .stat-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #FF8C00;
+        }
+        .stat-description {
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        .features {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px 0;
+        }
+        .feature-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+            max-width: 300px;
+            width: 100%;
+        }
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        .feature-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .cta-form, .about-me {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button, .cta-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background: #FF8C00;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        button:hover, .cta-button:hover {
+            background: #FFA500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="social-icons">
+                <img src="/api/placeholder/24/24" alt="Instagram">
+                <img src="/api/placeholder/24/24" alt="WhatsApp">
+            </div>
+            <ul>
+                <li><a href="#results">תוצאות</a></li>
+                <li><a href="#about">מי אני</a></li>
+                <li><a href="#course">קורס למתחילות</a></li>
+                <li><a href="#contact">צרי קשר</a></li>
+            </ul>
+        </nav>
+        <div class="logo-container">
+            <div class="logo">
+                <span>T</span><span>G</span>
+            </div>
+            <div class="tagline">Tomer's Place</div>
         </div>
-        <ul style={{ listStyle: 'none', display: 'flex', gap: '20px' }}>
-          <li>תוצאות</li>
-          <li>מי אני</li>
-          <li>קורס למתחילות</li>
-          <li>צרי קשר</li>
-        </ul>
-      </nav>
-      <div style={{ fontSize: '72px', fontWeight: 'bold' }}>
-        <span style={{ position: 'relative', left: '20px' }}>T</span>
-        <span>G</span>
-      </div>
-      <div style={{ fontSize: '24px', marginTop: '10px' }}>Tomer's Place</div>
-      <h1>קחי את הקריירה שלך לרמה הבאה עם ניילס</h1>
+        <h1>קחי את הקריירה שלך לרמה הבאה עם ניילס</h1>
     </header>
-    
-    <div style={{ display: 'flex', justifyContent: 'space-around', marginBottom: '40px' }}>
-      {[700, 50, 100].map((num, index) => (
-        <div key={index} style={{ background: 'rgba(255, 255, 255, 0.8)', borderRadius: '10px', padding: '20px', textAlign: 'center' }}>
-          <div style={{ fontSize: '2.5em', fontWeight: 'bold', color: '#FF8C00' }}>{num}</div>
-          <div>Stat description</div>
-        </div>
-      ))}
+
+    <div class="container">
+        <section class="stats">
+            <div class="stat-item">
+                <div class="stat-number">700</div>
+                <div class="stat-description">לקוחות שעברו דרכי</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50</div>
+                <div class="stat-description">בנות שעברו השתלמות אצלי</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100</div>
+                <div class="stat-description">תלמידות שעברו את הקורס הבסיסי שלי</div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-item">
+                <img src="/api/placeholder/150/150" alt="יחס אישי">
+                <h3>יחס אישי</h3>
+                <p>כל קורס מועבר ל-2 תלמידות בלבד! כדי לתת יחס אישי מדהים לכל תלמידה</p>
+            </div>
+        </section>
+        <section class="features">
+            <div class="feature-item">
+                <img src="/api/placeholder/150/150" alt="ידע שיווק קריטי">
+                <h3>ידע שיווק קריטי</h3>
+                <p>הספרים אינו רעה אך מספיק רק להוציא עבודות מושלמות, לאורך כל הקורס, נבנה יחד חשיבה שיווקית והספרנית בראשית החברתית</p>
+            </div>
+        </section>
+        <section class="features">
+            <div class="feature-item">
+                <img src="/api/placeholder/150/150" alt="תעודת הסמכה מקצועית">
+                <h3>תעודת הסמכה מקצועית</h3>
+                <p>כמובן שלאחר הקורס את מקבלי ממני תעודת הסמכה, תעודת ההסמכה תעזור לך בעתיד להתקדם דרכך בתחום</p>
+            </div>
+        </section>
+
+        <h2 style="text-align: center; margin-top: 40px;">הכל מתחיל כאן!</h2>
+        <a href="#contact" class="cta-button">להתחיל עכשיו</a>
+
+        <section id="about" class="about-me">
+            <h2>הסיפור שלי</h2>
+            <p>התחלתי ב2016 עוד שלא היו מכונות שיוף! הייתי בת 15 אז, עשיתי קורס על לק גל בנייה וקישוטים עם עוד 7 בנות בכיתה, כשסיימתי את הקורס הרגשתי שלא למדתי כלום ושום דבר! התחלתי לעשות על עצמי ועל חברות, עם הזמן התחלתי לקבל פניות מאנשים שרוצים לעשות אצלי לק וככה זה התגלגל! תוך 4 חודשים היה לי יומן עם 80 לקוחות ורובן חוזרות!</p>
+        </section>
+
+        <section id="contact" class="cta-form">
+            <h2>מוכנה להתקדם? צרי קשר עכשיו!</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">שם מלא:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">מספר טלפון:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">כתובת אימייל:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit">התחילי את המסע שלך</button>
+            </form>
+        </section>
     </div>
-    
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px', marginBottom: '40px' }}>
-      {['יחס אישי', 'ידע שיווק קריטי', 'תעודת הסמכה מקצועית'].map((title, index) => (
-        <div key={index} style={{ background: 'rgba(255, 255, 255, 0.8)', borderRadius: '10px', padding: '20px', maxWidth: '300px', width: '100%', textAlign: 'center' }}>
-          <div style={{ width: '150px', height: '150px', borderRadius: '50%', background: '#ccc', margin: '0 auto 20px' }}></div>
-          <h3>{title}</h3>
-          <p>Feature description</p>
-        </div>
-      ))}
-    </div>
-    
-    <h2 style={{ textAlign: 'center' }}>הכל מתחיל כאן!</h2>
-    <button style={{ display: 'block', width: '200px', margin: '20px auto', padding: '10px', background: '#FF8C00', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>להתחיל עכשיו</button>
-    
-    <div style={{ background: 'rgba(255, 255, 255, 0.8)', borderRadius: '10px', padding: '20px', maxWidth: '600px', margin: '20px auto' }}>
-      <h2>הסיפור שלי</h2>
-      <p>Story content...</p>
-    </div>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('תודה על ההתעניינות! ניצור איתך קשר בקרוב.');
+            // Here you would typically send the form data to a server
+        });
+    </script>
+</body>
+</html>
