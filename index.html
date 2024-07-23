@@ -3,403 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>התקדמי עם ניילס - Tomer Gedi</title>
+    <title>Tomer Nails - Level Up Your Manicure Career</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f5e1da 0%, #f1d1c1 100%);
-            direction: rtl;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff5e6;
+            color: #333;
+            line-height: 1.6;
         }
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .top-banner {
-            background-color: #FF8C00;
-            color: white;
-            text-align: center;
+        .pinned-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
             padding: 10px 0;
-            font-weight: bold;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        header {
-            background: transparent;
-            color: #333;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav {
+        .pinned-bar .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 5%;
         }
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            padding: 0;
-        }
-        nav ul li {
-            margin-left: 20px;
-        }
-        nav ul li a {
-            text-decoration: none;
+        header {
+            background-color: #fff5e6;
             color: #333;
-        }
-        .tagline {
-            font-size: 24px;
-            margin-top: 10px;
-            letter-spacing: 2px;
-        }
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin: 40px 0;
+            padding: 5rem 0 1rem;
             text-align: center;
+            margin-top: 50px;
         }
-        .stat-item {
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            margin-bottom: 20px;
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
-        .stat-item:hover {
-            transform: translateY(-5px);
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
-        .stat-number {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #FF8C00;
-        }
-        .stat-description {
-            font-size: 0.9em;
-            margin-top: 10px;
-        }
-        .features {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 40px 0;
-        }
-        .feature-item {
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            margin-bottom: 20px;
-            max-width: 300px;
-            width: 100%;
-        }
-        .feature-item:hover {
-            transform: translateY(-5px);
-        }
-        .cta-form, .about-me {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            margin: 20px auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        button, .cta-button {
-            display: block;
-            width: 200px;
-            margin: 20px auto;
-            padding: 10px;
-            background: #FF8C00;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+        .hero {
+            background-color: #fff5e6;
             text-align: center;
+            padding: 3rem 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #FF6600;
+            color: #FFF;
+            padding: 0.8rem 1.5rem;
             text-decoration: none;
+            border-radius: 5px;
             font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
-        button:hover, .cta-button:hover {
-            background: #FFA500;
+        .cta-button:hover {
+            background-color: #E65C00;
         }
-        .reviews {
-            margin: 40px 0;
+        .features, .about-me, .contact-form, .additional-benefits {
+            padding: 3rem 0;
+            background-color: #fff5e6;
+            margin-bottom: 2rem;
         }
-        .review-container {
+        .about-me, .features, .additional-benefits {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .feature-list, .benefits-list {
+            list-style-type: none;
+            padding-right: 20px;
+        }
+        .feature-list li, .benefits-list li {
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .feature-list li::before, .benefits-list li::before {
+            content: '✨';
+            position: absolute;
+            right: -20px;
+        }
+        .testimonials {
+            background-color: #fff5e6;
+            padding: 3rem 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        .testimonial-container {
             display: flex;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
-            gap: 20px;
-            padding: 20px 0;
-            white-space: nowrap;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 1rem;
         }
-        .review-item {
+        .testimonial {
             flex: 0 0 auto;
-            width: 250px;
-            background-color: #FFE5B4;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            background-color: #FFF;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-right: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             scroll-snap-align: start;
-            display: inline-block;
-            vertical-align: top;
         }
-        .review-item h3 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
+        .testimonial-content {
+            background-color: #F0F0F0;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
         }
-        .review-item p {
-            font-size: 0.9em;
-            line-height: 1.4;
-            max-height: 200px;
-            overflow-y: auto;
+        .testimonial-author {
+            font-weight: bold;
+            color: #FF6600;
+        }
+        .scroll-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        .scroll-button {
+            background-color: #FF6600;
+            color: #FFF;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .scroll-button:hover {
+            background-color: #E65C00;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        input {
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            border: 1px solid #DDD;
+            border-radius: 5px;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #FF6600;
+            color: #FFF;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        button:hover {
+            background-color: #E65C00;
+        }
+        footer {
+            background-color: #fff5e6;
+            color: #333;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
         }
         @media (max-width: 768px) {
-            .review-item {
-                width: 250px;
+            h1 {
+                font-size: 2rem;
             }
-        }
-        .important-section {
-            text-align: center;
-            margin: 40px 0;
-            padding: 20px;
-            background-color: #f0e6e0;
-            border-radius: 10px;
-        }
-        .boxes-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        .box {
-            background-color: #fff1e6;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 10px;
-            width: 250px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .box h3 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
+            h2 {
+                font-size: 1.5rem;
+            }
+            .testimonial {
+                width: 90%;
+                margin-right: 5%;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="top-banner">
-        הדרך להפוך את התשוקה שלך למקצוע מתחילה כאן!
+    <div class="pinned-bar">
+        <div class="container">
+            <div>Tomer Nails</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#features">Features</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </div>
 
     <header>
-        <nav>
-            <ul>
-                <li><a href="#results">תוצאות</a></li>
-                <li><a href="#about">מי אני</a></li>
-                <li><a href="#course">קורס למתחילות</a></li>
-                <li><a href="#contact">צרי קשר</a></li>
-            </ul>
-        </nav>
-        <div class="tagline">Tomer's Place</div>
-        <h1>קחי את הקריירה שלך לרמה הבאה עם ניילס</h1>
+        <div class="container">
+            <h1>Tomer Nails</h1>
+            <p>מובילה את המהפכה בתחום הציפורניים</p>
+        </div>
     </header>
 
-    <div class="container">
-        <section class="stats">
-            <div class="stat-item">
-                <div class="stat-number">700</div>
-                <div class="stat-description">לקוחות שעברו דרכי</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">50</div>
-                <div class="stat-description">בנות שעברו השתלמות אצלי</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">100</div>
-                <div class="stat-description">תלמידות שעברו את הקורס הבסיסי שלי</div>
-            </div>
-        </section>
+    <section class="hero">
+        <div class="container">
+            <h2>Level Up - קחי את הקריירה שלך לשלב הבא</h2>
+            <p>הצטרפי לתוכנית שתהפוך אותך למניקוריסטית מהשורה הראשונה</p>
+            <a href="#contact-form" class="cta-button">אני רוצה להתקדם!</a>
+        </div>
+    </section>
 
-        <section class="features">
-            <div class="feature-item">
-                <h3>יחס אישי</h3>
-                <p>כל קורס מועבר ל-2 תלמידות בלבד! כדי לתת יחס אישי מדהים לכל תלמידה</p>
-            </div>
-        </section>
-        <section class="features">
-            <div class="feature-item">
-                <h3>ידע שיווק קריטי</h3>
-                <p>הספרים אינו רעה אך מספיק רק להוציא עבודות מושלמות, לאורך כל הקורס, נבנה יחד חשיבה שיווקית והספרנית בראשית החברתית</p>
-            </div>
-        </section>
-        <section class="features">
-            <div class="feature-item">
-                <h3>תעודת הסמכה מקצועית</h3>
-                <p>כמובן שלאחר הקורס את מקבלי ממני תעודת הסמכה, תעודת ההסמכה תעזור לך בעתיד להתקדם דרכך בתחום</p>
-            </div>
-        </section>
+    <section id="about" class="about-me">
+        <div class="container">
+            <h2>מי אני</h2>
+            <p>התחלתי עוד בשנת 2016 כשעוד לא עבדתי בתחום. כיום אני מקורסת כבר 7 שנים ומשפיעה על חייהן של מאות בנות בתחום! כלום לא קרה במקרה, התחלתי לעשות על עצמי ועל חברות, עם הזמן התחלתי לקבל פניות מאנשים שרוצים לעשות אצלי! תוך 4 חודשים כבר היה לי יומן עם 80 לקוחות רק מהפה לאוזן!</p>
+        </div>
+    </section>
 
-        <section class="important-section">
-            <h2>חשוב לי שתביני</h2>
-            <p>בשעה טלפון אני יודעת, את לא תירכש ממך 3 דברים עיקריים שכדאי שתורי לך-</p>
-            
-            <div class="boxes-container">
-                <div class="box">
-                    <h3>התמדה</h3>
-                    <p>את היכולת להיות עקבמית לכל דבר ועניין! ואת צריכה להבין שאת באה ברגע שהחלטת להתחיל! לעבוד שהטכניקות שהעבדתי אותן, דברים יתחילו לזרום יותר בקלות</p>
-                </div>
-                <div class="box">
-                    <h3>משימתיות</h3>
-                    <p>כדי להצליח בתחום את תמיד תצטרכי ללמוד על המקצוע! איך בונים ציפה בצורה נכונה, מה ההשראות שצריך, שיווק, מקצועי, איך לחשב לקוחות, לתמוד את האנרגיות שלעצמך וזה מה שעמדת לאורך הקורס</p>
-                </div>
-                <div class="box">
-                    <h3>שירותיות</h3>
-                    <p>כדי לשמור את הלבנות שבעזרות אליך ולא יברחו להתחרות, את חייבת לשמור על רמת שירותיות מקבלת בעובה גבס כך שכל אחת</p>
-                </div>
-            </div>
+    <section id="features" class="features">
+        <div class="container">
+            <h2>מה תקבלי בתוכנית Level Up?</h2>
+            <ul class="feature-list">
+                <li>שיפור מיומנויות מקצועיות ברמה הגבוהה ביותר</li>
+                <li>טכניקות לשיווק העסק שלך ברשתות החברתיות</li>
+                <li>גישה לקהילה תומכת של מניקוריסטיות מובילות</li>
+                <li>קו ישיר אליי לתמיכה והכוונה</li>
+                <li>פוטנציאל להגדלת ההכנסה שלך משמעותית</li>
+            </ul>
+        </div>
+    </section>
 
-            <p>זה לא הולך להיות קלי אבל בדרך שתעשיי את שלושת אלה</p>
-            <h3>הקרת הסנפד שלך לא תהיה מוגבלת</h3>
-            <h3>הזמן שלך יהיה נתון לשליטתך</h3>
-            <h3>והכי חשוב - את תקומי בבוקר ותעשי את מה שאת אוהבת לעשות!</h3>
-            <p>לחלק מהבנות שכבר יצאו ממני עם תעודה היה חשוב להגיד לי מה הן חושבות על התהליך שעברו</p>
-        </section>
+    <section class="additional-benefits">
+        <div class="container">
+            <h2>ובנוסף את מקבלת ממני</h2>
+            <ul class="benefits-list">
+                <li>יחס אישי</li>
+                <li>כל קורס מועבר ב2 תלמידות בכיתה כדי לתת לכן את המענה המדויק והנכון לכן!</li>
+                <li>ידע שיווקי קריטי</li>
+                <li>לימוד איך לתת שירות נכון ואיך לתמחר את עצמך</li>
+                <li>תעודת הסמכה מקצועית בסיום הקורס</li>
+                <li>80 לקוחות ורווח חודשי</li>
+            </ul>
+        </div>
+    </section>
 
-        <section class="reviews">
-            <h2 style="text-align: center; margin-top: 40px;">מה הלקוחות שלנו אומרים</h2>
-            <div class="review-container">
-                <div class="review-item">
-                    <h3>TOMER GEDI</h3>
-                    <p>תומר!
-                    אין מנגנון לשיפ לתנויך ולכל מה...
-                    ובפרט להגיד לך תודה על הכל, הרגשתי
-                    שמקצועי לטיפולי ומשהו לשמר אך לומדת
-                    עוד דברים חדשים ותוספת שיטות חדשות
-                    ומביאים יש!
-                    אין פשוט, כמה באמת...
-                    לפני שבדייה אינני דברים עם עוד הסכן
-                    בנות והתנסויתי אבל לך השיטה ודעתני
-                    שהכי אני בוחר
-                    ממש פתוחה ללכת להשקיע בזה ובכול ולא
-                    הבנתי כלום! זה בדיוק מה שאני צריכה
-                    אז את כל אישי מעשיר ודהאת להגיד
-                    שמאוד תמשיכו בעניין באמת!
-                    אז תודה על כל דבר וגישה ובכל אינני
-                    את השקיעים המדהימה הזה שטסה להר לי
-                    אותך בשמש תבורך
-                    אבל לא יהשער הקבוצה וואטס
-                    תמשיכו להיות מדהים
-                    אז תודה ושוב ובהלצה בקורסים הבאים</p>
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>מה אומרות המשתתפות שלנו</h2>
+            <div class="testimonial-container" id="testimonial-container">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"וואו תומר מה שעברתי איתך בקורס... רכשתי כלים לחיים! הקורס שלך פשוט משנה חיים לא רק בפן העסקי,ובעבודה במספרה גם בחיים האישיים. נתת לי את הביטחון לקחת את העסק שלי צעד קדימה ולהגשים חלום."</p>
+                    </div>
+                    <p class="testimonial-author">- שירה, 24</p>
                 </div>
-                <div class="review-item">
-                    <h3>TOMER GEDI</h3>
-                    <p>היי תומר נהנתי לקרוא לך לה מוצלחת
-                    23.6 ממשלמת השווה
-                    תודה לך תומר נפלא לראות לך מה שווה
-                    ממחמאה אמיתית!
-                    תודה רבה לך אותך בודאי שמחה שאמצא
-                    עם כולם חברים והחבר לאשפתך תודה! ,כן פשו
-                    שמחה לראות שיש לכל אחת מהירה נקודות
-                    שמגיע לכולם המשפחה וכמובן אותנו על כל
-                    הצוות, כמה הבדלות, והלואי שנמשיך להצליח
-                    זוהר וגם נהנתי</p>
-                    <div style="color: red;">❤️</div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"הי אהובה שלי אני אפילו לא יודעת מאיפה להתחיל להודות לך. בזכותך למדתי לעבוד נכון, לנהל את העבודה שלי,ואת הזמן. מה להגיד ומה לא להגיד ללקוחות. בזכותך אני יודעת לתמחר את עצמי ולנהל אינסטגרם בצורה נכונה ועוד המון המון דברים שאת לימדת אותי. תודה לך על הכל!"</p>
+                    </div>
+                    <p class="testimonial-author">- מיכל, 28</p>
                 </div>
-                <div class="review-item">
-                    <h3>TOMER GEDI</h3>
-                    <p>היי אוהבת כמו שהפכתי לך החברית ללכת
-                    ליזום הדרכה של זמן והתחלתי!
-                    נעשה לתושב אשמח לעזור מה הקורט, ואולי
-                    נגיע שלא חסרו עלי מיכן, וכבר לחלבין
-                    האלה הדרכים ל׳ שהבנו בו כל זלגת על
-                    בטוח, והיה אפשר לראות את זה כבר
-                    בזסגנות האופטימיות שלך והעבודות שלך
-                    והדרך שבה מה מגוונות לגמרי אותה,
-                    אפשר היה כבך להתבדר עוד כפי שראיתי
-                    ולקום... בקרוב שהתרשמות של לא נאו
-                    תזכרי לעבוד איתך קודם מכיוון וחיפה
-                    וההום היה איש על כל שאלת תמיד
-                    וידעת לענות ולהסביר לי את הדרך ואני
-                    מודדחת את הדרך ורציתי מרחב נקווה לך
-                    מוכת דלברים נכשת כ׳ נותר מתחבבים גם
-                    אני לחלק, אין להתבגר עם לימודית, אלך
-                    לידות וללוות את הדרך והון בגאגטד... הכל
-                    היה פיי טוב! והיו היו שמחת בעולם
-                    שבעולם הו ! תודה</p>
-                    <div style="color: blue;">🙏</div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"תומר את פשוט מדהימה! תוך 4 חודשים בערך להשהיות איתך בקורס הכל התחיל להתקדם במקום הנכון. הצלחתי לתת יותר ערך ללקוחות שלי. היום אני מצליחה לחיות מהעבודה שלי ולהתפרנס בכבוד. תודה על כל מה שלמדתי ממך!"</p>
+                    </div>
+                    <p class="testimonial-author">- רותם, 22</p>
                 </div>
-                <div class="review-item">
-                    <h3>TOMER GEDI</h3>
-                    <p>תומר אני חייבת לומר לך איזה מופלא לי
-                    שהיה שלם שהתחלתי לשעות פרטיורים
-                    ועכשיו אפילו כספים זה הפתח אותם אותי!
-                    אני רוצה להמשיך ולכלא הגרב קורסים
-                    ועבודות חדשות באמת שלא עושה כמוהו
-                    עד שמצאתי לקלוט שאני באמת יודעת מה
-                    לעשות ואני צריכה להגיד תודה אלף לך
-                    והדבר הכי מה שעשיתי בנושא הזאת כל
-                    לדחמיץ את הזמן כה חשובה ונשמה עליך
-                    באמת 💗💗🥰</p>
-                    <div style="color: red;">❤️</div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"תומר יקרה! רציתי להגיד לך תודה ענקית על כל מה שלימדת אותי. בזכותך אני לא מפחדת יותר לתמחר את עצמי ויודעת איך לשווק את עצמי נכון. אני מרגישה שאני יכולה להתמודד עם כל סיטואציה מול לקוחה. תודה על הכל!"</p>
+                    </div>
+                    <p class="testimonial-author">- נועה, 26</p>
                 </div>
             </div>
-        </section>
+            <div class="scroll-buttons">
+                <button class="scroll-button" id="scroll-left">&#8592;</button>
+                <button class="scroll-button" id="scroll-right">&#8594;</button>
+            </div>
+        </div>
+    </section>
 
-        <h2 style="text-align: center; margin-top: 40px;">הכל מתחיל כאן!</h2>
-        <a href="#contact" class="cta-button">להתחיל עכשיו</a>
-
-        <section id="about" class="about-me">
-            <h2>הסיפור שלי</h2>
-            <p>התחלתי ב2016 עוד שלא היו מכונות שיוף! הייתי בת 15 אז, עשיתי קורס על לק גל בנייה וקישוטים עם עוד 7 בנות בכיתה, כשסיימתי את הקורס הרגשתי שלא למדתי כלום ושום דבר! התחלתי לעשות על עצמי ועל חברות, עם הזמן התחלתי לקבל פניות מאנשים שרוצים לעשות אצלי לק וככה זה התגלגל! תוך 4 חודשים היה לי יומן עם 80 לקוחות ורובן חוזרות!</p>
-        </section>
-
-        <section id="contact" class="cta-form">
-            <h2>מוכנה להתקדם? צרי קשר עכשיו!</h2>
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name">שם מלא:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">מספר טלפון:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">כתובת אימייל:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <button type="submit">התחילי את המסע שלך</button>
+    <section id="contact" class="contact-form" id="contact-form">
+        <div class="container">
+            <h2>מוכנה לעשות את הצעד הבא?</h2>
+            <p>השאירי פרטים ונחזור אלייך בהקדם</p>
+            <form>
+                <input type="text" placeholder="שם מלא" required>
+                <input type="tel" placeholder="מספר טלפון" required>
+                <input type="email" placeholder="כתובת אימייל" required>
+                <button type="submit">שלחי</button>
             </form>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('תודה על ההתעניינות! ניצור איתך קשר בקרוב.');
-            // Here you would typically send the form data to a server
-        });
-    </script>
-</body>
-</html>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Tomer
